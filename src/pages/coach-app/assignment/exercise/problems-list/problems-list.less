@@ -1,0 +1,115 @@
+.problems-list-hort {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .problem {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 200px;
+    padding-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    justify-content: center;
+    align-items: center;
+
+    .board {
+      display: flex;
+      justify-content: center;
+      border: 1px solid #343434;
+    }
+
+    .assessment {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      justify-content: center;
+      align-items: center;
+
+      .side-to-move {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 2px solid #343434;
+
+        &.white {
+          background-color: #fefefe;
+        }
+
+        &.black {
+          background-color: #343434;
+        }
+      }
+
+      .result {
+        font-weight: bold;
+      }
+    }
+
+    .meta {
+      text-align: center;
+
+      .white,
+      .black {
+        display: inline-block;
+        padding: 0.1em 0.5em;
+      }
+    }
+
+    .moves-preview {
+      &.solution {
+        .move {
+          font-weight: bold;
+        }
+      }
+
+      .move-container {
+        display: inline-block;
+      }
+
+      .move {
+        display: inline-block;
+        margin-right: 0.5em;
+      }
+    }
+
+    .attempt-details {
+      max-height: 300px;
+      width: 100%;
+      margin-top: 1.5em;
+      text-align: center;
+      overflow-y: scroll;
+
+      .attempt-table {
+        width: 100%;
+        border: 1px solid #d9d9d9;
+
+        tr.solved {
+          background-color: rgba(0, 255, 0, 0.25);
+        }
+
+        td,
+        th {
+          padding: 8px;
+        }
+
+        td.time {
+          min-width: 60px;
+          text-align: right;
+        }
+
+        td.moves {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import '../common.less';
+
+.page.home {
+  .wrapper {
+    max-width: 960px;
+    min-width: 960px;
+  }
+
+  .banner {
+    background: @chesslang-primary-color;
+    min-height: 550px;
+    text-align: center;
+    padding-top: 48px;
+
+    div.nav-menu {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      min-width: 960px;
+      background: @chesslang-primary-color;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      a {
+        display: inline-block;
+        margin-left: 1em;
+        margin-right: 1em;
+        color: white;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    }
+
+    div.logo {
+      margin: 1.5em auto;
+      margin-top: 50px;
+      overflow: hidden;
+
+      img {
+        width: 175px;
+        height: 175px;
+      }
+    }
+
+    .academy-name {
+      line-height: 0;
+      padding-top: 32px;
+      font-size: 2em;
+      color: #fefefe;
+    }
+
+    .tagline {
+      line-height: 0;
+      padding-top: 32px;
+      font-size: 1.5em;
+      color: #fefefe;
+    }
+
+    .social-container {
+      margin-top: 25px;
+      padding-top: 25px;
+
+      i {
+        color: #fefefe;
+        font-size: 2.5em;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+      }
+    }
+  }
+
+  .homepage-content,
+  .about-us {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.25em;
+  }
+
+  .homepage-content {
+    .wrapper {
+      width: 750px;
+      margin-top: -75px;
+      background: #fefefe;
+      padding: 2.5em;
+      min-height: 450px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+  }
+
+  .about-us {
+    background: @chesslang-primary-color;
+    color: #fefefe;
+    min-height: 250px;
+  }
+
+  .footer {
+    padding-top: 2.5em !important;
+    padding-bottom: 2.5em !important;
+
+    color: #fefefe;
+    font-size: 1.25em;
+    text-align: center;
+  }
+}

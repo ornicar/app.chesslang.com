@@ -1,0 +1,58 @@
+{
+  "login": {
+    "learn": "Learn",
+    "measure": "Measure",
+    "improve": "Improve",
+    "playFeature": {
+      "title": "Play with other students in the academy",
+      "points": [
+        "Within the online chess arena, you can play with other students anytime and improve your game. Games are recorded automatically for analysis"
+      ]
+    },
+    "solvePuzzles": {
+      "title": "Solve tactics and improve your game",
+      "points": [
+        "We will provide you tailor-made homework puzzles to solve. Keeping solving them and unlock performance insights"
+      ]
+    },
+    "liveLessons": {
+      "title": "Online coaching",
+      "points": [
+        "Rain or shine, stay connected with us anytime, anywhere. Collaboratively discuss plans and strategy remotely during tournaments.",
+        "Attend online classes with our renowned coaches."
+      ]
+    },
+
+    "storeGames": {
+      "title": "Store and share your tournament games",
+      "points": [
+        "Store your tournament games in the platform and share it with us for analysis"
+      ]
+    },
+
+    "improveCalc": {
+      "title": "Improve your calculations with Blindfold Chess",
+      "points": [
+        "Play blindfold chess in multiple levels and visualise your calculations better during the game"
+      ]
+    },
+    "practicePositions": {
+      "title": "Practice positions with engine",
+      "points": [
+        "Practice positions with the engine and improve your accuracy."
+      ]
+    },
+    "log_in_area": {
+      "username": "Username or Email32",
+      "password": "Password",
+      "log_in": "Log in",
+      "forgot_password": "Forgot Password?",
+      "reset_password": "Reset",
+      "no_account?": "Don't have an account?",
+      "sign_up": "Sign Up",
+      "username_required_message": "username is required",
+      "password_required_message": "password is required",
+      "invalid_creds": "Invalid Credentials Buhahhah"
+    }
+  }
+}

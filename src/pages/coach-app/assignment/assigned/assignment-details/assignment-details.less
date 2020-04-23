@@ -1,0 +1,40 @@
+.assignment-details {
+  .student-panel-header {
+    position: relative;
+
+    .name {
+      font-weight: bold;
+    }
+
+    .summary {
+      margin-top: 0.25em;
+    }
+
+    .solved,
+    .time,
+    .attempts {
+      display: inline-block;
+      margin-right: 8px;
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    .status {
+      position: absolute;
+      right: 24px;
+      top: 12px;
+    }
+  }
+
+  .assignment-attempt-panel {
+    &.status-incomplete {
+      background-color: rgb(255, 180, 180);
+    }
+
+    &.status-complete {
+      background-color: rgb(189, 255, 180);
+    }
+  }
+}

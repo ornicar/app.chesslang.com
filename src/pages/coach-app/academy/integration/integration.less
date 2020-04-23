@@ -1,0 +1,64 @@
+@import '../../../common.less';
+
+.integration {
+  .locked-message {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    text-align: center;
+    align-items: center;
+    margin-top: 10em;
+
+    i {
+      font-size: 48px;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .status {
+    margin-bottom: 1em;
+    width: 500px;
+  }
+
+  form {
+    width: 600px;
+
+    .subdomain-checkbox {
+      margin-bottom: 0;
+    }
+  }
+
+  .domain-settings {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    .instructions {
+      .bold {
+        font-weight: 600;
+      }
+    }
+
+    .url {
+      display: inline-block;
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+
+    table {
+      margin-top: 0.5em;
+
+      th,
+      td {
+        min-width: 250px;
+        padding: 0.5em;
+        border: 1px solid #c0c0c0;
+      }
+
+      td {
+        font-family: monospace;
+        font-size: 1.05em;
+      }
+    }
+  }
+}

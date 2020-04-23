@@ -1,0 +1,55 @@
+.blindbot .inner {
+  .action-bar {
+    .right {
+      button {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  .game-container {
+    display: flex;
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+
+    .board-container {
+      position: relative;
+    }
+
+    .thinking {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      user-select: none;
+      left: 0;
+      right: 0;
+      top: -30px;
+      padding: 5px;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: bold;
+    }
+
+    .last-move {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      font-size: 1.25em;
+      margin-top: 0.5em;
+      margin-bottom: -0.5em;
+      font-weight: bold;
+    }
+  }
+}
+
+.position-setup-modal {
+  .player.color {
+    margin-top: 175px;
+    margin-left: -50px;
+    width: 250px;
+  }
+}

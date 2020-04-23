@@ -1,0 +1,91 @@
+.dbList {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.loadingOverlay,
+.errorOverlay,
+.emptyOverlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingOverlay {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.errorOverlay {
+  i {
+    font-size: 48px;
+    color: #645eeb;
+  }
+
+  p {
+    font-size: 1.05em;
+    margin-top: 1em;
+  }
+}
+
+.emptyOverlay {
+  i {
+    font-size: 48px;
+    color: #343434;
+  }
+
+  p {
+    font-size: 1.05em;
+    margin-top: 1em;
+  }
+}
+
+.database {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+
+  align-items: center;
+  text-align: center;
+
+  cursor: pointer;
+
+  &.selected {
+    background: #645eeb;
+    color: #fefefe;
+  }
+
+  .fileIcon {
+    font-size: 48px;
+  }
+
+  span {
+    display: inline-block;
+    margin-top: 0.25em;
+  }
+
+  .name {
+    font-weight: 600;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    background: #645eeb;
+    color: #fefefe;
+  }
+}

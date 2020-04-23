@@ -1,0 +1,38 @@
+@import '../../chesslang-theme.less';
+@import '~draft-js/dist/Draft.css';
+
+.rich-text-editor {
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+
+  &.focused {
+    border-color: @chesslang-primary-color;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(100, 94, 235, 0.2);
+  }
+
+  .control-bar {
+    height: 28px;
+    background: @chesslang-secondary-light-color;
+    padding-left: 0.5em;
+
+    .icon-container {
+      display: inline-block;
+      margin-top: 3px;
+      width: 30px;
+      text-align: center;
+      cursor: pointer;
+
+      color: #a9a9a9;
+
+      &:hover,
+      &.active {
+        color: #000;
+      }
+    }
+  }
+
+  .editor-container {
+    padding: 0.5em 1em;
+  }
+}

@@ -1,0 +1,123 @@
+@import '../../../../chesslang-theme.less';
+
+.game-viewer {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  margin: 1rem;
+
+  .container {
+    flex: 1;
+    display: flex;
+  }
+
+  .game-container {
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+
+    .board-container {
+      margin: 0 auto;
+
+      .action-buttons {
+        position: relative;
+        text-align: center;
+
+        button {
+          margin: 0.5em;
+        }
+
+        .flip-button {
+          position: absolute;
+          right: 0;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .scoresheet {
+    max-height: 50vh;
+    overflow: auto;
+    padding: 1rem;
+    background-color: white;
+
+    .variation {
+      margin-right: 0.25em;
+      margin-left: 0.25em;
+
+      &.level-0 {
+        .move {
+          font-weight: bold;
+        }
+      }
+
+      &.level-1 {
+        margin-left: 1em;
+
+        .move {
+          font-weight: normal;
+        }
+      }
+
+      &.level-2 {
+        margin-left: 2em;
+
+        .move {
+          font-weight: normal;
+        }
+      }
+
+      &.level-3 {
+        margin-left: 2.5em;
+
+        .move {
+          font-weight: normal;
+        }
+      }
+
+      &.level-4 {
+        margin-left: 3em;
+
+        .move {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .move {
+      display: inline-block;
+      padding: 0.1em 0.25em;
+      margin-right: 0.25em;
+      cursor: pointer;
+
+      &:hover,
+      &.current {
+        background-color: @chesslang-primary-color;
+        color: #fefefe;
+        border-radius: 5px;
+      }
+
+      .number {
+        margin-right: 0.1em;
+      }
+    }
+
+    .text.annotation {
+      margin-right: 0.1em;
+      color: @chesslang-primary-color;
+    }
+
+    .result {
+      font-weight: bold;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 79%;
+
+    .scoresheet {
+      max-height: 100%;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.gamePreview {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+
+  .game-info {
+    flex: 1;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    // scroll tabs content if overflow
+    .ant-tabs-content {
+      overflow: auto;
+    }
+  }
+
+  &.noGameSelected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #e0e0e0;
+    margin: 24px;
+  }
+
+  .loadingOverlay,
+  .errorOverlay,
+  .emptyOverlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loadingOverlay {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .errorOverlay {
+    i {
+      font-size: 48px;
+      color: #fc0000;
+    }
+
+    p {
+      font-size: 1.05em;
+      margin-top: 1em;
+    }
+  }
+
+  .chessboardContainer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    max-height: 400px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+
+    .controlButtons {
+      max-height: 24px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+      }
+
+      i {
+        font-size: 18px;
+        margin-top: 2.5px;
+      }
+    }
+  }
+
+  .scoresheetContainer {
+    flex-shrink: 0;
+    display: flex;
+    overflow: auto;
+  }
+}

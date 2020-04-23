@@ -1,0 +1,122 @@
+@import '../../../../common.less';
+
+.problembase-viewer-drawer {
+  .problem {
+    position: relative;
+    padding-top: 0.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+
+    .overlay {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: 96px;
+        color: darken(@chesslang-primary-color, 50);
+      }
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 0.5;
+        display: flex;
+        background: @chesslang-primary-color;
+      }
+    }
+
+    &.selected {
+      .overlay {
+        opacity: 0.5;
+        display: flex;
+        background-color: none;
+      }
+    }
+
+    .board {
+      display: flex;
+      justify-content: center;
+    }
+
+    .assessment {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      justify-content: center;
+      align-items: center;
+
+      .side-to-move {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 1em;
+        border-radius: 10px;
+        border: 2px solid #343434;
+
+        &.white {
+          background-color: #fefefe;
+        }
+
+        &.black {
+          background-color: #343434;
+        }
+      }
+
+      .result {
+        font-weight: bold;
+      }
+    }
+
+    .meta {
+      text-align: center;
+
+      .white,
+      .black {
+        display: inline-block;
+        padding: 0.1em 0.5em;
+      }
+    }
+  }
+
+  .select-bar {
+    padding: 1em 1.5em;
+
+    .select-button {
+      margin-right: 8px;
+    }
+  }
+
+  .loading-state.container {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .anticon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .exception-text {
+      font-size: 16px;
+      margin: 0 0 4px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .button {
+      max-width: 150px;
+    }
+  }
+}

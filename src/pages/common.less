@@ -1,0 +1,245 @@
+@import '../chesslang-theme.less';
+
+@header-height: 64px;
+@footer-height: 250px;
+@app-width: 1280px;
+@sidebar-width: 0px;
+
+.wrapper {
+  width: @app-width;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+}
+
+.header {
+  height: @header-height;
+  background-color: @chesslang-primary-color;
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+    padding-top: @header-height * 0.25;
+
+    button {
+      margin-left: 1em;
+    }
+  }
+}
+
+.page {
+  background-color: #fefefe;
+  min-width: @app-width;
+
+  &.app {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding-left: @sidebar-width;
+      min-height: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background-color: @layout-body-background;
+
+      .open-inner {
+        display: flex;
+        flex: 1;
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5em;
+        background-color: #fefefe;
+        flex: 1;
+
+        .action-bar {
+          height: 25px;
+          padding: 1em 1.5em;
+          background: transparent;
+
+          .left {
+            float: left;
+          }
+
+          .right {
+            float: right;
+          }
+        }
+
+        .below-action-bar {
+          flex-shrink: 0;
+          margin-bottom: 0;
+        }
+
+        .title {
+          text-align: left;
+        }
+
+        .container {
+          box-sizing: border-box;
+          padding: 1.5em;
+
+          .coming-soon {
+            width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 10em;
+
+            i {
+              font-size: 48px;
+            }
+
+            h3 {
+              margin-top: 1em;
+            }
+          }
+        }
+
+        .blank-state,
+        .error-state,
+        .loading-state {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .anticon {
+            font-size: 48px;
+            margin-bottom: 20px;
+          }
+
+          .exception-text {
+            font-size: 16px;
+            margin: 0 0 4px;
+            color: rgba(0, 0, 0, 0.85);
+          }
+
+          .button {
+            max-width: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    margin-top: 1.15em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .content {
+    min-height: calc(100vh - 75px);
+    margin-bottom: -1 * @footer-height;
+  }
+
+  .footer {
+    padding-top: @footer-height * 0.5;
+    padding-bottom: @footer-height * 0.5;
+    background-color: @chesslang-secondary-dark-color;
+
+    .message {
+      color: @chesslang-secondary-gray-color;
+      text-align: center;
+    }
+  }
+}
+
+// Including page home here because it wont get bundled as its not a part of <App />
+@import '../pages/home/home.less';
+
+.ant-drawer-body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  padding: 0;
+
+  .drawer-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .title {
+      padding: 1.5em;
+      border-bottom: 1px solid #e9e9e9;
+      padding: 16px 24px;
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+
+    .content {
+      flex: 1;
+      padding: 16px 24px;
+      overflow: auto;
+    }
+
+    .status-bar {
+      width: 100%;
+      padding: 10px 24px;
+      background-color: #fefefe;
+      border-bottom: 1px solid #e8e8e8;
+      text-align: left;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .button-bar {
+      width: 100%;
+      background-color: #fefefe;
+      border-top: 1px solid #e8e8e8;
+      padding: 10px 16px;
+      text-align: right;
+      border-radius: 0 0 4px 4px;
+
+      .cancel-button {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.big-tooltip {
+  .ant-tooltip-inner {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding-top: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+// antd fixes
+
+.ant-pagination-prev .anticon-left,
+.ant-pagination-next .anticon-right,
+.ant-steps-icon {
+  margin-top: 8px;
+}
+
+.ant-steps-icon {
+  display: inline-block;
+}
+
+.anticon.anticon-caret-down.ant-tree-switcher-icon {
+  margin-top: 6px;
+}

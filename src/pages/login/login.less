@@ -1,0 +1,115 @@
+@import '../common.less';
+
+/* latin-ext */
+@font-face {
+  font-family: 'Bubblegum Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bubblegum Sans Regular'), local('BubblegumSans-Regular'),
+    url(https://fonts.gstatic.com/s/bubblegumsans/v7/AYCSpXb_Z9EORv1M5QTjEzMEteaOxIL_bw.woff2)
+      format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bubblegum Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bubblegum Sans Regular'), local('BubblegumSans-Regular'),
+    url(https://fonts.gstatic.com/s/bubblegumsans/v7/AYCSpXb_Z9EORv1M5QTjEzMEteaAxII.woff2)
+      format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.page,
+.wrapper {
+  width: 100% !important;
+  min-width: initial !important;
+}
+
+.wrapper {
+  max-width: 1280px;
+}
+
+.login-title {
+  text-align: center;
+  font-size: calc(2rem + 2vmin);
+  margin: 0 0 1rem 0 !important;
+}
+
+.hero-point {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.auto-center {
+  display: block;
+  margin: auto;
+}
+
+.feature {
+  padding: 1rem;
+
+  .feature-content {
+    padding: 1rem;
+
+    & h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    & p {
+      font-size: 1.25rem;
+    }
+  }
+
+  .feature-image {
+    padding: 1rem;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}
+
+.page.login {
+  font-family: 'Bubblegum Sans', cursive, sans-serif;
+  color: #333;
+
+  .title {
+    margin-top: 1.15em;
+    margin-bottom: 1.15em;
+    text-align: center;
+  }
+
+  .login-form {
+    max-width: 350px;
+    margin: 0 auto;
+
+    p.error-message {
+      margin-top: -1em;
+      color: @error-color;
+      text-align: center;
+    }
+
+    .submit-button-container {
+      text-align: center;
+    }
+  }
+
+  .login-help {
+    text-align: center;
+
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../../.././chesslang-theme.less';
+
+.public-gamebases {
+  .select-sort-by {
+    margin-right: 1em;
+  }
+
+  .gamebase-cards {
+    .card {
+      box-sizing: border-box;
+      border: 0.5rem white solid;
+      padding: 1rem;
+      background-color: #f0f0f0;
+
+      cursor: pointer;
+
+      &:hover,
+      &.selected {
+        background: @chesslang-primary-color;
+        color: #fefefe;
+      }
+
+      .name {
+        display: block;
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+      }
+
+      .count {
+        font-size: 0.9em;
+
+        &::after {
+          content: ' games';
+        }
+      }
+    }
+  }
+}

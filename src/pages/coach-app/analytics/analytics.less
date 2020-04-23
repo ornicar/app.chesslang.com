@@ -1,0 +1,77 @@
+.analytics.content {
+  .analyticsContainer {
+    padding: 0;
+    margin: 20px;
+  }
+  .analytics-chartcard {
+    max-height: 24vh;
+    height: 15vh;
+    width: 18.8vw;
+    max-width: 25vw;
+    border-radius: 3px;
+    margin: 1.6vw;
+  }
+  // FIXME: Don't change the antd styles
+  // Instead create your own class
+
+  //   .antd-pro-charts-chart-card-meta {
+  //     color: grey;
+  //     font-size: 14px;
+  //     font-weight: 500;
+  //   }
+  //   .antd-pro-charts-chart-card-action {
+  //     float: right;
+  //     color: grey;
+  //   }
+  //   .antd-pro-charts-chart-card-total {
+  //     font-size: 20px;
+  //     color: black;
+  //   }
+  .top-panel {
+    .label {
+      margin-left: 15px;
+    }
+    .select {
+      margin-left: 15px;
+    }
+  }
+  .analytics-card-container {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .analytics-table {
+    margin-top: 20px;
+    th,
+    td {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .analyticsContainer {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2%;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+    .analytics-chartcard {
+      min-height: 90px;
+      width: 20vw;
+      border-radius: 3px;
+      margin: 1vw;
+    }
+    .analytics-card-container {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  // To fix pagination next, previous arrow alignments
+  .ant-pagination-next .anticon-right,
+  .ant-pagination-prev .anticon-left {
+    margin-top: 8px;
+  }
+}

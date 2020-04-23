@@ -1,0 +1,58 @@
+@import '../../../common.less';
+
+.assigned.inner {
+  .secondary-action-bar {
+    flex-shrink: 0;
+    min-height: 50px;
+    max-height: 50px;
+
+    .student-select-input {
+      margin-top: 0.75em;
+      width: 100%;
+    }
+  }
+
+  div.assignments.container {
+    overflow-y: auto;
+    padding: 0 !important; // TODO: Fix this
+
+    .meta,
+    .submeta {
+      .name {
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.5em;
+      }
+
+      .count {
+        display: inline-block;
+        color: @chesslang-secondary-gray-color;
+      }
+
+      .created {
+        display: inline-block;
+        margin-right: 0.5em;
+        font-size: 0.9em;
+        color: @chesslang-secondary-gray-color;
+      }
+
+      .description,
+      .timeline {
+        display: block;
+        color: @chesslang-secondary-gray-color;
+        font-size: 0.9em;
+      }
+
+      .label {
+      }
+    }
+
+    .submeta {
+      margin-top: 0.25em;
+    }
+
+    .tags-container {
+      margin-top: 0.25em;
+    }
+  }
+}

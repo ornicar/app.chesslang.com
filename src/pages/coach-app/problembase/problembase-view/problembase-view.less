@@ -1,0 +1,81 @@
+@import '../../../../chesslang-theme.less';
+
+.problembase-view {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .select-sort-by {
+    margin-right: 1em;
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+  }
+
+  .problems-list {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .problem {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      align-items: center;
+      justify-content: center;
+
+      margin: 1.5em;
+      margin-bottom: 0.5em;
+
+      .board {
+        border: 1px solid #343434;
+      }
+
+      .assessment {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        justify-content: center;
+        align-items: center;
+
+        .side-to-move {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          margin-right: 1em;
+          border-radius: 10px;
+          border: 2px solid #343434;
+
+          &.white {
+            background-color: #fefefe;
+          }
+
+          &.black {
+            background-color: #343434;
+          }
+        }
+
+        .result {
+          font-weight: bold;
+        }
+      }
+
+      .meta {
+        text-align: center;
+
+        .white,
+        .black {
+          display: inline-block;
+          padding: 0.1em 0.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.hamburger {
+  display: none;
+  position: absolute;
+  opacity: 0.75;
+  color: white;
+  padding: 0.5rem;
+  background: rgb(0, 21, 41);
+  font-size: 26px;
+  cursor: pointer;
+  transition: 250ms;
+  z-index: 999;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+  z-index: 999;
+
+  .sidebar-menu {
+    overflow: auto;
+    height: 100vh;
+  }
+
+  // .notification-item {
+  //   position: absolute;
+  //   bottom: 54px;
+  // }
+
+  // .announcement-item {
+  //   position: absolute;
+  //   bottom: 96px;
+  // }
+
+  // .preferences-item {
+  //   position: absolute;
+  //   bottom: 54px;
+  // }
+
+  // .logout-item {
+  //   position: absolute;
+  //   bottom: 12px;
+  // }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.no-scrollbar {
+  -ms-overflow-style: none;
+}

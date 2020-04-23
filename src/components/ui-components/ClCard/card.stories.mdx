@@ -1,0 +1,132 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+import { ClCard } from './ClCard'
+
+export const studentOnline = {
+  name: 'Jane Doe',
+  status: 'online',
+  gameStatus: {
+    status: 'open',
+    color: 'black',
+    time: '05:00'
+  }
+}
+
+export const studentAway = {
+  name: 'John Doe',
+  status: 'away'
+}
+
+export const scoreCardData = {
+  name: 'John Doe',
+  status: 'away',
+  stats: [
+    {
+      title: 'Won',
+      value: 7
+    },
+    {
+      title: 'Lost',
+      value: 12
+    },
+    {
+      title: 'Drawn',
+      value: 3
+    },
+    {
+      title: 'Total',
+      value: 22
+    }
+  ]
+}
+
+export const livePlayer = {
+  fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+  players: [
+    {
+      name: 'Jane',
+      score: '0.5'
+    },
+    {
+      name: 'Jane',
+      score: '0.5'
+    }
+  ]
+}
+
+export const livePlayerTwo = {
+  fen: 'rnbqkbnr/pppp1ppp/8/4p3/3P4/1P6/P1P1PPPP/RNBQKBNR w KQkq - 0 1',
+  players: [
+    {
+      name: 'Jane',
+      time: '3:00'
+    },
+    {
+      name: 'Jane',
+      time: '3:00'
+    }
+  ]
+}
+
+<Meta title="Components/Card" component={ClCard} />
+
+# Card
+
+A simple `Card` component
+
+<ClCard type="request" student={studentOnline} />
+
+### Example's
+
+#### An Student Invitation
+
+<Preview>
+  <Story name="Online Student">
+    <ClCard type="request" student={studentOnline} />
+  </Story>
+</Preview>
+
+#### An Online Student
+
+<Preview>
+  <Story name="Away Student">
+    <ClCard type="invite" student={studentAway} />
+  </Story>
+</Preview>
+
+#### An Score Card
+
+<Preview>
+  <Story name="Stat Card">
+    <ClCard type="statcard" student={scoreCardData} />
+  </Story>
+</Preview>
+
+#### An Score Card
+
+<Preview>
+  <Story name="Score Card">
+    <ClCard
+      type="scorecard"
+      players={livePlayer.players}
+      fen={livePlayer.fen}
+    />
+  </Story>
+</Preview>
+
+#### An Live Game Card
+
+<Preview>
+  <Story name="Live Game Card">
+    <ClCard
+      type="livegame"
+      players={livePlayerTwo.players}
+      fen={livePlayerTwo.fen}
+    />
+  </Story>
+</Preview>
+
+### Example's
+
+## Props
+
+<Props of={ClCard} />

@@ -1,0 +1,48 @@
+.announcements {
+  .announcement {
+    height: 300px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+
+    .announcement__title {
+      text-align: center;
+    }
+
+    .announcement__text {
+      text-align: center;
+    }
+
+    .announcement__image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+  }
+
+  .slick-slide {
+    background: white;
+    overflow: hidden;
+  }
+
+  .slick-dots {
+    li button {
+      background-color: black;
+    }
+
+    .slick-active button {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+  }
+}
+
+.announcement-prev,
+.announcement-next {
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.ant-modal-close-x {
+  padding: 1.25rem;
+}

@@ -1,0 +1,62 @@
+.content.student.dashboard {
+  user-select: none;
+  background-color: #001529 !important;
+  justify-content: center;
+  padding-top: 1rem;
+
+  .welcome-message {
+    text-align: center;
+    font-size: 32px;
+    color: #fefefe;
+    margin-bottom: 1rem;
+  }
+
+  .student-apps {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    .app {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-width: 120px;
+      max-width: 170px;
+      min-height: 120px;
+      max-height: 170px;
+      margin: 1.25rem;
+
+      color: #fefefe;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: lighten(#001529, 10%);
+      }
+
+      i {
+        font-size: 48px;
+      }
+
+      .nav-text {
+        display: inline-block;
+        margin-top: 0.25em;
+        font-size: calc(1rem + 1vmin);
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .content.student.dashboard .welcome-message {
+    margin-top: 6rem;
+  }
+}

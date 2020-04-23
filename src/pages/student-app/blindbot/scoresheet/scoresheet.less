@@ -1,0 +1,51 @@
+@import '../../../../chesslang-theme.less';
+
+.blindbot-scoresheet-container {
+  .scoresheet {
+    flex: 1;
+    text-align: left;
+    overflow-y: auto;
+    display: block !important; // FIXME
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    user-select: none;
+
+    .variation {
+      margin-right: 0.25em;
+      margin-left: 0.25em;
+
+      &.level-0 {
+        .move {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .move {
+      display: inline-block;
+      padding: 0.1em 0.25em;
+      margin-right: 0.25em;
+
+      &.current {
+        background-color: @chesslang-primary-color;
+        color: #fefefe;
+        border-radius: 5px;
+      }
+
+      .number {
+        margin-right: 0.1em;
+      }
+    }
+
+    .no-moves {
+      display: inline-block;
+      font-style: italic;
+      text-align: center;
+      width: 100%;
+    }
+
+    .result {
+      font-weight: bold;
+    }
+  }
+}

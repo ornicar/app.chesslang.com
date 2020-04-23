@@ -1,0 +1,65 @@
+.analyzer {
+  width: 100%;
+
+  .loadingOverlay,
+  .errorOverlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .best-move {
+    flex: 1;
+    text-align: left;
+    overflow-y: auto;
+    user-select: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .variation {
+    }
+
+    .move {
+      display: inline-block;
+      padding: 0.1em 0.25em;
+      margin-right: 0.25em;
+
+      &.current {
+        background-color: #645eeb;
+        color: #fefefe;
+        border-radius: 5px;
+      }
+
+      .number {
+        margin-right: 0.1em;
+      }
+    }
+
+    .controlButtons {
+      max-height: 24px;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+      }
+
+      i {
+        font-size: 18px;
+        margin-top: 2.5px;
+      }
+    }
+  }
+}

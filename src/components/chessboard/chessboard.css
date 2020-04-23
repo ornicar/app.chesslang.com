@@ -1,0 +1,197 @@
+.ChessboardContainer {
+  position: relative;
+  user-select: none;
+  cursor: default;
+}
+
+.ChessboardContainer .side-to-move {
+  position: absolute;
+  right: -5%;
+  display: inline-block;
+  min-width: 3.5%;
+  min-height: 3.5%;
+  border-radius: 100%;
+  border: 2.5px solid #343434;
+}
+
+.ChessboardContainer .side-to-move.w {
+  background-color: #fefefe;
+}
+
+.ChessboardContainer.orientation-w .side-to-move.w {
+  bottom: 5;
+}
+
+.ChessboardContainer.orientation-b .side-to-move.w {
+  top: 5;
+}
+
+.ChessboardContainer .side-to-move.b {
+  background-color: #343434;
+}
+
+.ChessboardContainer.orientation-w .side-to-move.b {
+  top: 5;
+}
+
+.ChessboardContainer.orientation-b .side-to-move.b {
+  bottom: 5;
+}
+
+.ChessboardContainer.interaction-mode-move {
+  cursor: pointer;
+}
+
+.SetupChessboardContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.SetupChessboardContainer .InnerChessboardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.InnerChessboardContainer > .Layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.SetupChessboardContainer .left,
+.SetupChessboardContainer .right {
+  flex-shrink: 0;
+}
+
+.SetupChessboardContainer .right {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.SetupChessboardContainer .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.SetupChessboardContainer .left .left-inner {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.SetupChessboardContainer .LeftPieces {
+  display: flex;
+  flex-direction: column;
+}
+
+.SetupChessboardContainer .RightPieces {
+  display: flex;
+  flex-direction: column;
+}
+
+.SetupChessboardContainer .settings-container {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 0 1em;
+  margin-left: 2.5em;
+}
+
+.SetupChessboardContainer .settings-container .castling {
+  margin-bottom: 0.5em;
+}
+
+.SetupChessboardContainer .settings-container .white {
+  margin-bottom: 0.5em;
+}
+
+.SetupChessboardContainer .settings-container .castling .label {
+  display: block;
+}
+
+.SetupChessboardContainer .settings-container .castling .ant-checkbox-wrapper {
+  margin-left: 0;
+}
+
+.SetupChessboardContainer .settings-container .buttons {
+  margin-top: 1.5em;
+}
+
+.SetupChessboardContainer .settings-container .buttons .label {
+  display: block;
+}
+
+.SetupChessboardContainer .settings-container .buttons button {
+  margin: 0.5em 0;
+  width: 80%;
+}
+
+.SetupChessboardContainer .settings-container .side-to-play {
+  margin-top: 1.5em;
+}
+
+.SetupChessboardContainer .bottom-container {
+  padding: 1em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.SetupChessboardContainer .bottom-container .muted-text {
+  margin-top: 0.25em;
+  margin-left: 1em;
+  font-size: 0.85em;
+  color: #a0a0a0;
+}
+
+.LeftPieces,
+.RightPieces {
+  user-select: none;
+}
+
+.Chessboard {
+  position: absolute;
+  user-select: none;
+  cursor: default;
+}
+
+.Chessboard .Layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.Chessboard .Pieces.Layer img {
+  position: absolute;
+}
+
+.Chessboard .Interaction.Layer div {
+  cursor: default;
+}
+
+.ChessboardContainer.ChessboardContainer.interaction-mode-move
+  .Chessboard
+  .Interaction.Layer
+  div {
+  cursor: pointer;
+}
+
+.Chessboard .Interaction.Layer div:hover {
+  background-color: #208530;
+  opacity: 0.35;
+}
+
+.Chessboard .PromotionPrompt.Layer img {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.Chessboard .PromotionPrompt.Layer img:hover {
+  background-color: rgba(255, 100, 100, 0.75);
+}

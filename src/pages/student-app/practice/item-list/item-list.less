@@ -1,0 +1,30 @@
+@import '../../../common.less';
+
+.practice {
+  .items-list {
+    overflow: auto;
+
+    .item {
+      padding: 1em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      &:hover {
+        background: @chesslang-primary-color;
+        color: #fefefe;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .ant-tag {
+        text-align: center;
+        height: 1.7em;
+        margin: 0.5em 0.25em;
+        padding-top: 1px;
+        font-size: 1em;
+      }
+    }
+  }
+}

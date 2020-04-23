@@ -1,0 +1,42 @@
+@import '../../../../common.less';
+
+.problembase-drawer {
+  .list-private-checkbox,
+  .list-public-checkbox {
+    margin: 1em 0;
+  }
+
+  .problembase-cards {
+    flex: 1;
+    overflow-y: auto;
+
+    .card {
+      box-sizing: border-box;
+      margin-bottom: 25px;
+      padding: 1em;
+      background-color: #f0f0f0;
+
+      cursor: pointer;
+
+      &:hover,
+      &.selected {
+        background: @chesslang-primary-color;
+        color: #fefefe;
+      }
+
+      .name {
+        display: block;
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+      }
+
+      .count {
+        font-size: 0.9em;
+
+        &::after {
+          content: ' problems';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../../common.less';
+
+.students {
+  .divider {
+    flex-shrink: 0;
+    margin-top: 2.5em;
+  }
+
+  .networked-students {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    padding-bottom: 24px;
+
+    p.muted-text {
+      font-size: 0.95em;
+      color: #999999;
+      text-align: center;
+
+      .password {
+        color: #cc0000;
+      }
+
+      .click-to-reveal {
+        display: inline-block;
+        padding-top: 0.55em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        padding-bottom: 0.55em;
+        border-radius: 3px;
+        line-height: 0;
+        border: 1px solid #777777;
+        color: #777777;
+      }
+    }
+
+    .scroller {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      .row {
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}

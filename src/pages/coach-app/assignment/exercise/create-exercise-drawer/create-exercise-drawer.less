@@ -1,0 +1,36 @@
+@import '../../../../common.less';
+
+.batch-size {
+  margin-left: 1em;
+  width: 3em;
+}
+
+.create-exercise-drawer {
+  .loading-state.container,
+  .error-state.container {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .anticon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .exception-text {
+      font-size: 16px;
+      margin: 0 0 4px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .button {
+      max-width: 150px;
+    }
+  }
+
+  .tags-field {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,115 @@
+.gamebox.content {
+  .gameboxContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-direction: row;
+    background: #fefefe;
+    margin: 12px;
+    padding: 12px;
+
+    position: absolute;
+    top: 48px;
+    right: 0px;
+    left: 80px;
+    bottom: 0px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    flex-shrink: 0;
+
+    .ant-divider {
+      &.ant-divider-horizontal {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+      &.ant-divider-vertical {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+    }
+
+    .actionBar {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+
+      .ant-input {
+        min-height: 0;
+      }
+
+      .uploadPgnButton {
+        margin-right: 8px;
+      }
+
+      .newDbButton {
+        margin-right: 8px;
+      }
+
+      .shareDbButton {
+        margin-right: 8px;
+      }
+
+      .deleteDbButton {
+        margin-right: 8px;
+      }
+
+      * {
+        flex-shrink: 0;
+      }
+
+      .spacer {
+        flex: 1;
+      }
+
+      .searchInput {
+        margin-right: 8px;
+      }
+    }
+
+    .dbList {
+      display: flex;
+      flex: 0.5;
+      flex-shrink: 0;
+
+      &.inner {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
+
+    .gameList {
+      display: flex;
+      flex: 0.5;
+      flex-shrink: 0;
+
+      &.inner {
+        flex: 1;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex: 0.3;
+    flex-shrink: 0;
+
+    .gamePreview {
+      display: flex;
+      flex: 1;
+      flex-shrink: 0;
+    }
+  }
+}

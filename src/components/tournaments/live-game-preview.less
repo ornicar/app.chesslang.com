@@ -1,0 +1,21 @@
+.live-game-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: auto;
+  height: 100%;
+
+  // reset the height from chessgroundboard component
+  .brown.merida {
+    height: initial !important;
+  }
+
+  .game-container {
+    max-width: 300px;
+    margin: 1rem;
+
+    .live-game-board {
+      padding: 0.5rem 0;
+    }
+  }
+}

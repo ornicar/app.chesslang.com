@@ -1,0 +1,68 @@
+.gameList {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  :global(.ant-table td) {
+    white-space: nowrap;
+  }
+
+  &.noDbSelected {
+    display: flex;
+    flex: 1 !important;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #e0e0e0;
+    margin: 24px;
+  }
+}
+
+.loadingOverlay,
+.errorOverlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingOverlay {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.errorOverlay {
+  i {
+    font-size: 24px;
+    color: #fc0000;
+  }
+
+  p {
+    font-size: 1.05em;
+    margin-top: 1em;
+  }
+}
+
+.ant-table-tbody > tr {
+  transition: none;
+}
+
+.rowSelected {
+  background: #645eeb;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.rowSelected:hover td {
+  background: #645eeb !important;
+}
